@@ -79,7 +79,7 @@ begin
         begin
             if (clock'event and clock = '1') then
                 if (regWrite = '1' and (to_integer(unsigned (wr)) /= regn - 1)) then
-                    entrada(    ) <= d;
+                    entrada(to_integer(unsigned (wr)) <= d;
                     load(to_integer(unsigned(addressIN))) <= '1';
                 elsif (regWrite = '0') then
                     load <= (others=>'0');
